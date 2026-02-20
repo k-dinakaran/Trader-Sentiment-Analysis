@@ -21,7 +21,7 @@ This project investigates whether crypto market sentiment (measured by the Fear 
 ## 📁 Datasets
 
 | Dataset | Description | Source |
-|---------|------------|--------|
+|----------|------------|---------|
 | `fear_greed_index.csv` | Daily Fear & Greed scores (0–100) + classification | alternative.me |
 | `historical_data.csv` | Hyperliquid on-chain trade history (211K+ rows, 32 traders, 16 columns) | Hyperliquid Exchange |
 
@@ -29,11 +29,9 @@ This project investigates whether crypto market sentiment (measured by the Fear 
 
 ---
 
-## ⚙️ Setup & How to Run
+# ⚙️ Setup & How to Run
 
-### 1️⃣ Install Required Libraries
-
-```bash
+## 1️⃣ Install Required Libraries
 pip install pandas numpy matplotlib seaborn scipy scikit-learn
 
 ## 2️⃣ Add Dataset Files
@@ -49,14 +47,13 @@ Place the following files in the project directory:
 
 Open:
 
+`trader_sentiment_analysis.ipynb`
 
 Run all cells sequentially.
 
 ---
 
 # 🔬 Analysis Pipeline
-
----
 
 ## Part A — Data Preparation
 
@@ -86,8 +83,6 @@ Run all cells sequentially.
 - Mean / median daily PnL, win rate, drawdown by Fear / Neutral / Greed
 - Mann-Whitney U tests with effect sizes (rank-biserial r)
 
----
-
 ### B2 — Behavioral Changes
 
 - Leverage differences across regimes
@@ -95,8 +90,6 @@ Run all cells sequentially.
 - Position size variation
 - Long/Short bias changes
 - Statistical testing for all comparisons
-
----
 
 ### B3 — Trader Segmentation (3 Segments)
 
@@ -110,16 +103,16 @@ Run all cells sequentially.
 
 # 📊 Visualizations (10 Figures)
 
-- fig1 — Fear & Greed Index full history timeline  
-- fig2 — Daily PnL distributions by sentiment  
-- fig3 — Win rate & drawdown by sentiment  
-- fig4 — Behavior metrics (2×2 grid)  
-- fig5 — Segment × Sentiment PnL heatmaps  
-- fig6 — Leverage distribution: Fear vs Greed overlay  
-- fig7 — Top-10 traders + win rate vs PnL scatter  
-- fig8 — Daily aggregate PnL overlaid with F&G score  
-- fig9 — K-Means elbow curve + cluster scatter  
-- fig10 — Gradient Boosting feature importances  
+- fig1 — Fear & Greed Index full history timeline
+- fig2 — Daily PnL distributions by sentiment
+- fig3 — Win rate & drawdown by sentiment
+- fig4 — Behavior metrics (2×2 grid)
+- fig5 — Segment × Sentiment PnL heatmaps
+- fig6 — Leverage distribution: Fear vs Greed overlay
+- fig7 — Top-10 traders + win rate vs PnL scatter
+- fig8 — Daily aggregate PnL overlaid with F&G score
+- fig9 — K-Means elbow curve + cluster scatter
+- fig10 — Gradient Boosting feature importances
 
 ---
 
@@ -131,8 +124,6 @@ Run all cells sequentially.
 - StandardScaler normalization
 - Elbow-curve selection
 - 4 behavioral archetypes identified
-
----
 
 ## Profitability Prediction Model
 
